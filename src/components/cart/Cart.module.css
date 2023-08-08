@@ -51,6 +51,7 @@
 
 .divisor {
     border-top: unset;
+    border-bottom: 1px solid var(--light-grayish-blue);
 }
 
 .cart_checkout {
@@ -95,7 +96,7 @@
 @media screen and (min-width: 768px) {
     .cart {
         top: 6rem;
-        right: -5rem;
+        right: 0rem;
         transform-origin: top;
     }
 }

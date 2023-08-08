@@ -4,7 +4,7 @@
     padding: unset;
     width: 1rem;
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
 
 .menu_icon {
@@ -19,6 +19,7 @@
     bottom: 0;
     left: 0;
     pointer-events: none;
+    z-index: 1;
     /* Animation  */
     opacity: 0;
     transition: opacity .25s ease-in-out;
@@ -32,6 +33,7 @@
     left: 0;
     background-color: var(--white);
     max-width: 15.625rem;
+    z-index: 2;
     /* Animation */
     transform: translateX(-100%);
     transition: transform .125s ease-in-out;
@@ -43,6 +45,7 @@
 
 .dark_layer_visible {
     opacity: 75%;
+    pointer-events: all;
 }
 
 .menu_options {
@@ -79,14 +82,16 @@
         position: unset;
         transform: unset;
         max-width: unset;
+        background-color: transparent;
     }
 
     .menu_options {
         font-weight: var(--fw-regular);
         font-size: var(--fs);
+        background-color: unset;
         margin: unset;
         display: flex;
-        gap: 1.75rem;
+        gap: clamp(1rem, 2.381vw - 0.143rem, 2rem);
     }
 
     .menu_option {

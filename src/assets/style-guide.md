@@ -41,5 +41,5 @@ The designs were created to the following widths:
 
 Mobile view: Hamburger icon - logo - space - cart - picture
 Desktop view: logo - options - space - cart - picture
-States: Nav menu (open, closed) , Cart (open, closed, delete item, item list)
+States: Nav menu (open, closed) , Cart (open, closed, delete item, item list, number of items)
 Components: Nav bar, Nav menu, Cart

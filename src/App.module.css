@@ -1,0 +1,26 @@
+.nav {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        padding: 0;
+        margin-inline: auto;
+        border-block-end: 1px solid var(--light-grayish-blue);
+        width: fit-content;
+    }
+
+    .left_wrapper {
+        flex-direction: row-reverse;
+        gap: 3.5rem;
+    }
+}

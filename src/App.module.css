@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .left_wrapper {
@@ -11,16 +12,34 @@
     gap: 1rem;
 }
 
+.right_wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.avatar_picture {
+    max-width: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
     .nav {
         padding: 0;
-        margin-inline: auto;
+        margin-inline: clamp(1rem, 13.521vw - 2.169rem, 10rem);
         border-block-end: 1px solid var(--light-grayish-blue);
-        width: fit-content;
     }
 
     .left_wrapper {
         flex-direction: row-reverse;
-        gap: 3.5rem;
+        gap: clamp(1rem, 3.756vw + 0.12rem, 3.5rem);
+    }
+
+    .right_wrapper {
+        align-items: center;
+        gap: clamp(1rem, 3.005vw + 0.296rem, 3rem);
+    }
+
+    .avatar_picture {
+        max-width: 3rem;
     }
 }

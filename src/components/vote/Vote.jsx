@@ -11,7 +11,9 @@ const Vote = ({ score }) => {
     }
 
     function handleMinusClick() {
-        setVote(vote - 1);
+        if(vote > 0) {
+            setVote(vote - 1);
+        }
     }
 
     return (

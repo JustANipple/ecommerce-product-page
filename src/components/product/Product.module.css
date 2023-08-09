@@ -80,4 +80,28 @@
         padding: 0;
         flex: 1;
     }
+
+    .product_name {
+        font-size: calc(var(--fs) * 3);
+    }
+
+    .product_description {
+        margin-block: 2rem 1.5rem;
+        line-height: 1.75;
+    }
+
+    .price {
+        display: unset;
+    }
+
+    .price_left_wrapper {
+        margin-block-end: .25rem;
+    }
+
+    .select {
+        margin-block-start: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 }

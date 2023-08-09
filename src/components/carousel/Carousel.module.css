@@ -64,7 +64,31 @@
         flex: 1;
     }
 
+    .previous_button,
+    .next_button {
+        display: none;
+    }
+
+    .main_pictures {
+        border-radius: 1rem;
+    }
+
     .flexed_pictures {
         display: flex;
+        justify-content: space-between;
+    }
+
+    .flexed_pictures li {
+        border-radius: 1rem;
+        overflow: hidden;
+        max-width: 6rem;
+    }
+
+    .picture_active {
+        border: 2px solid var(--orange);
+    }
+
+    .picture_active img {
+        opacity: 50%;
     }
 }

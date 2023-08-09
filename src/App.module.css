@@ -43,7 +43,8 @@
     }
 
     .main {
-        padding-inline: 3rem;
+        padding-block: 5.625rem;
+        padding-inline: clamp(1rem, 4.762vw - 1.286rem, 3rem);
         margin-inline: clamp(1rem, 13.521vw - 2.169rem, 10rem);
         display: grid;
         grid-template-columns: 1fr 1fr;

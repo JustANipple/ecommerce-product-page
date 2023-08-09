@@ -4,6 +4,7 @@ import styles from "./Carousel.module.css"
 const Carousel = () => {
 
     const [slide, setSlide] = useState("0");
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const pictures = [
         "image-product-1.jpg",
@@ -68,7 +69,10 @@ const Carousel = () => {
             <ul className={styles.flexed_pictures}>
                 {thumbnails.map((thumbnail, index) => {
                     return (
-                        <li key={index}>
+                        <li 
+                            key={index} 
+                            className={activeIndex === index ? styles.picture_active : ""}
+                            onClick={() => setActiveIndex(index)}>
                             <a href={"#slide_" + index}>
                                 <img 
                                     src={thumbnail} 

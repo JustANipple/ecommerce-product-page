@@ -18,3 +18,9 @@
     font-family: var(--ff);
     font-weight: var(--fw-bold);
 }
+
+@media screen and (min-width: 768px) {
+    .container_vote {
+        min-width: 10rem;
+    }
+}

@@ -1,4 +1,5 @@
 import styles from "./App.module.css"
+import Carousel from "./components/carousel/Carousel"
 import Cart from "./components/cart/Cart"
 import Menu from "./components/menu/Menu"
 
@@ -23,6 +24,7 @@ function App() {
           />
         </div>
       </nav>
+      <Carousel />
     </>
   )
 }

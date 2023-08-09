@@ -1,0 +1,62 @@
+.carousel {
+    display: grid;
+    row-gap: 2rem;
+    max-width: 375px;
+}
+
+.main_content {
+    position: relative;
+}
+
+.main_pictures {
+    padding: unset;
+    list-style: none;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    max-height: 18.5rem;
+    pointer-events: none;
+}
+
+.main_pictures::-webkit-scrollbar {
+    display: none;
+}
+
+.main_pictures li {
+    flex: 0 0 100%;
+}
+
+.previous_button,
+.next_button {
+    background-color: var(--white);
+    border-radius: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-block: auto;
+    height: fit-content;
+    aspect-ratio: 1/1;
+    width: 2.5rem;
+    display: grid;
+    place-content: center;
+}
+
+.previous_button img,
+.next_button img {
+    max-height: .875rem;
+}
+
+.previous_button {
+    left: 1rem;
+}
+
+.next_button {
+    right: 1rem;
+}
+
+.flexed_pictures {
+    padding: unset;
+    list-style: none;
+    /*display: flex;*/
+    display: none;
+}

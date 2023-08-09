@@ -41,4 +41,13 @@
     .avatar_picture {
         max-width: 3rem;
     }
+
+    .main {
+        padding-inline: 3rem;
+        margin-inline: clamp(1rem, 13.521vw - 2.169rem, 10rem);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        column-gap: clamp(1rem, 16.667vw - 7rem, 8rem);
+    }
 }

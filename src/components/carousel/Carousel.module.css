@@ -1,7 +1,6 @@
 .carousel {
     display: grid;
     row-gap: 2rem;
-    max-width: 375px;
 }
 
 .main_content {
@@ -14,7 +13,6 @@
     display: flex;
     overflow: scroll;
     scroll-behavior: smooth;
-    max-height: 18.5rem;
     pointer-events: none;
 }
 
@@ -59,4 +57,14 @@
     list-style: none;
     /*display: flex;*/
     display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel {
+        flex: 1;
+    }
+
+    .flexed_pictures {
+        display: flex;
+    }
 }

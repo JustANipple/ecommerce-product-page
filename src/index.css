@@ -33,6 +33,7 @@ p, h1, h2, h3, h4, h5, h6 {
     /* = Colors = */
     /* Primary */
     --orange: hsl(26, 100%, 55%);
+    --light-orange: hsla(26, 100%, 55%, 0.125);
     --pale-orange: hsl(25, 100%, 94%);
     /* Neutral */
     --very-dark-blue: hsl(220, 13%, 13%);
@@ -51,4 +52,5 @@ p, h1, h2, h3, h4, h5, h6 {
 
 html, body {
   min-height: 100vh;
+  scroll-behavior: smooth;
 }

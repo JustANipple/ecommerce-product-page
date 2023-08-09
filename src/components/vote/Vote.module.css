@@ -1,0 +1,20 @@
+.container_vote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--light-grayish-blue);
+    border-radius: .5rem;
+}
+
+.vote_plus,
+.vote_minus {
+    border: unset;
+    background-color: unset;
+    padding: unset;
+}
+
+.vote_score {
+    font-family: var(--ff);
+    font-weight: var(--fw-bold);
+}

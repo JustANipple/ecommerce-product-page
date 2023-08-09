@@ -2,6 +2,7 @@ import styles from "./App.module.css"
 import Carousel from "./components/carousel/Carousel"
 import Cart from "./components/cart/Cart"
 import Menu from "./components/menu/Menu"
+import Product from "./components/product/Product"
 
 function App() {
 
@@ -24,7 +25,10 @@ function App() {
           />
         </div>
       </nav>
-      <Carousel />
+      <main className={styles.main}>
+        <Carousel />
+        <Product />
+      </main>
     </>
   )
 }

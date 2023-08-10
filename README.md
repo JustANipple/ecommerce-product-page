@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](assets/design/screenshot-desktop)
+![](./src/assets/design/screenshot-desktop)
 
 ### Links
 

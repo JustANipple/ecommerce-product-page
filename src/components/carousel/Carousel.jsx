@@ -24,8 +24,10 @@ const Carousel = ({ type="default", carousel, setCarousel }) => {
     function handlePreviousClick() {
         if(parseInt(slide) === 0) {
             setSlide("3");
+            setActiveIndex(pictures.length - 1);
         } else {
             setSlide((parseInt(slide) - 1).toString());
+            setActiveIndex(activeIndex - 1);
         }
     }
 

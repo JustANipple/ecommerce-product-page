@@ -1,10 +1,7 @@
-import { useState } from "react"
 import styles from "./Vote.module.css"
 
 // eslint-disable-next-line react/prop-types
-const Vote = ({ score }) => {
-
-    const [vote, setVote] = useState(score);
+const Vote = ({ vote, setVote }) => {
 
     function handlePlusClick() {
         setVote(vote + 1);

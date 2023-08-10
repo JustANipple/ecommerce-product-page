@@ -132,10 +132,10 @@
     }
 
     .lightbox .previous_button {
-        left: -1.25rem;
+        left: -1.75rem;
     }
 
     .lightbox .next_button {
-        right: -1.25rem;
+        right: -1.75rem;
     }
 }

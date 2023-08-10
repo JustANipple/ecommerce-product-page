@@ -1,26 +1,38 @@
+/* eslint-disable react/prop-types */
 import styles from "./Product.module.css"
 import Vote from "../vote/Vote"
 
-const Product = () => {
+const Product = ({ product, vote, setVote, cartItems, setCartItems }) => {
+
+    function handleClick() {
+        setCartItems({
+            picture: product.picture, 
+            name: product.name,
+            finalPrice: product.finalPrice,
+            quantity: vote
+        })
+    }
+
     return (
         <div className={styles.product}>
-            <p className={styles.product_company}>Sneaker company</p>
-            <p className={styles.product_name}>fall limited edition sneakers</p>
-            <p className={styles.product_description}>
-                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
-            </p>
+            <p className={styles.product_company}>{product.company}</p>
+            <p className={styles.product_name}>{product.name}</p>
+            <p className={styles.product_description}>{product.description}</p>
             <div className={styles.price}>
                 <div className={styles.price_left_wrapper}>
-                    <p className={styles.price_final}>$125.00</p>
-                    <p className={styles.price_discount}>50%</p>
+                    <p className={styles.price_final}>{product.finalPrice}</p>
+                    <p className={styles.price_discount}>{product.discount}</p>
                 </div>
-                <s className={styles.price_starting}>$250.00</s>
+                <s className={styles.price_starting}>{product.startingPrice}</s>
             </div>
             <div className={styles.select}>
                 <Vote 
-                    score={0}
+                    vote={vote}
+                    setVote={setVote}
                 />
-                <button className={styles.add_to_cart}>
+                <button 
+                    className={styles.add_to_cart}
+                    onClick={handleClick}>
                     <img 
                         src="icon-cart.svg" 
                         alt="cart icon" 

@@ -2,17 +2,10 @@ import { useState } from "react"
 import styles from "./Carousel.module.css"
 
 // eslint-disable-next-line react/prop-types
-const Carousel = ({ type="default", carousel, setCarousel }) => {
+const Carousel = ({ type="default", carousel, setCarousel, pictures }) => {
 
     const [slide, setSlide] = useState("0");
     const [activeIndex, setActiveIndex] = useState(0);
-
-    const pictures = [
-        "image-product-1.jpg",
-        "image-product-2.jpg",
-        "image-product-3.jpg",
-        "image-product-4.jpg"
-    ]
 
     const thumbnails = [
         "image-product-1-thumbnail.jpg",
@@ -24,6 +17,7 @@ const Carousel = ({ type="default", carousel, setCarousel }) => {
     function handlePreviousClick() {
         if(parseInt(slide) === 0) {
             setSlide("3");
+            // eslint-disable-next-line react/prop-types
             setActiveIndex(pictures.length - 1);
         } else {
             setSlide((parseInt(slide) - 1).toString());
@@ -56,6 +50,7 @@ const Carousel = ({ type="default", carousel, setCarousel }) => {
                     <img src="icon-previous.svg" alt="" />
                 </a>
                 <ul className={styles.main_pictures} onClick={handleCarouselClick}>
+                    {/*eslint-disable-next-line react/prop-types*/}
                     {pictures.map((picture, index) => {
                         return (
                             <li 

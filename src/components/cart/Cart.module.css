@@ -65,6 +65,12 @@
     padding-block: 1rem;
     border-radius: .5rem;
     margin: 0rem 1.5rem 2rem 1.5rem;
+    cursor: pointer;
+    transition: opacity .125s ease-in-out;
+}
+
+.cart_checkout:hover {
+    opacity: 70%;
 }
 
 .item {
@@ -93,12 +99,22 @@
     border: unset;
     background-color: unset;
     padding: unset;
+    cursor: pointer;
+}
+
+.cart_empty {
+    font-weight: var(--fw-bold);
+    color: var(--dark-grayish-blue);
+    width: 22.5rem;
+    min-height: 11.75rem;
+    display: grid;
+    place-content: center;
 }
 
 @media screen and (min-width: 768px) {
     .cart {
         top: 6rem;
-        right: 0rem;
+        right: 5rem;
         transform-origin: top;
     }
 }

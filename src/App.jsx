@@ -7,7 +7,11 @@ import Product from "./components/product/Product"
 
 function App() {
 
-  const [carousel, setCarousel] = useState(true);
+  const [carousel, setCarousel] = useState(false);
+
+  function handleIconClick() {
+    setCarousel(!carousel);
+  }
 
   return (
     <>
@@ -35,11 +39,21 @@ function App() {
         />
         <Product />
         {carousel ?
-        <Carousel 
-          type={"lightbox"}
-          carousel={carousel}
-          setCarousel={setCarousel}
-        />
+        <div className={styles.dark_layer}>
+          <>
+          <img 
+            src="icon-close.svg" 
+            alt="close icon" 
+            className={styles.carousel_close_icon}
+            onClick={handleIconClick}
+          />
+          <Carousel 
+            type={"lightbox"}
+            carousel={carousel}
+            setCarousel={setCarousel}
+          />
+          </>
+        </div>
         : ""}
       </main>
     </>

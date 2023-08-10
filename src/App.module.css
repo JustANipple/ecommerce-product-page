@@ -19,6 +19,8 @@
 
 .avatar_picture {
     max-width: 1.5rem;
+    border-radius: 100vw;
+    border: 2px solid transparent;
 }
 
 @media screen and (min-width: 768px) {
@@ -40,6 +42,12 @@
 
     .avatar_picture {
         max-width: 3rem;
+        transition: all .25s ease-in-out;
+    }
+
+    .avatar_picture:hover {
+        cursor: pointer;
+        border-color: var(--orange);
     }
 
     .main {
@@ -51,5 +59,28 @@
         place-content: center;
         align-items: center;
         column-gap: clamp(1rem, 16.667vw - 7rem, 8rem);
+    }
+
+    .dark_layer {
+        background-color: rgba(0, 0, 0, 0.75);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        pointer-events: all;
+        z-index: 2;
+        /* Animation  */
+
+        display: grid;
+        place-content: center;
+    }
+
+    .carousel_close_icon {
+        width: 1.25rem;
+        filter: brightness(0) invert(1);
+        margin-block: 1.5rem;
+        margin-left: auto;
+        cursor: pointer;
     }
 }

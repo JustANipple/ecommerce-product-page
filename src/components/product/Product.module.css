@@ -69,6 +69,7 @@
     justify-content: center;
     align-items: center;
     gap: clamp(0rem, -1.1429rem + 2.381vw, 1rem);
+    box-shadow: 0rem 1rem 2rem -1rem var(--orange);
 }
 
 .cart_icon {
@@ -105,5 +106,14 @@
         display: flex;
         align-items: center;
         gap: clamp(0rem, -1.1429rem + 2.381vw, 1rem);
+    }
+
+    .add_to_cart {
+        cursor: pointer;
+        transition: opacity .125s ease-in-out;
+    }
+
+    .add_to_cart:hover {
+        opacity: 70%;
     }
 }

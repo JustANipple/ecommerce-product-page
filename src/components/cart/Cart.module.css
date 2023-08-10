@@ -3,6 +3,7 @@
     border: unset;
     padding: unset;
     position: relative;
+    cursor: pointer;
 }
 
 .darken_icon {

@@ -74,6 +74,10 @@
         pointer-events: unset;
     }
 
+    .main_pictures li {
+        cursor: pointer;
+    }
+
     .flexed_pictures {
         display: flex;
         justify-content: space-between;
@@ -84,18 +88,43 @@
         border-radius: 1rem;
         overflow: hidden;
         max-width: 6rem;
+        transition: opacity .125s ease-in-out;
+    }
+
+    .flexed_pictures li:hover {
+        opacity: 50%;
     }
 
     .picture_active {
         border: 2px solid var(--orange);
+        background-color: white;
     }
 
     .picture_active img {
-        opacity: 50%;
+        opacity: 30%;
+    }
+
+    .lightbox {
+        max-width: 34.375rem;
+        pointer-events: all;
     }
 
     .lightbox .previous_button,
     .lightbox .next_button {
         display: grid;
+        width: 3.5rem;
+    }
+
+    .lightbox .previous_button img,
+    .lightbox .next_button img {
+        max-height: unset;
+    }
+
+    .lightbox .previous_button {
+        left: -1.25rem;
+    }
+
+    .lightbox .next_button {
+        right: -1.25rem;
     }
 }

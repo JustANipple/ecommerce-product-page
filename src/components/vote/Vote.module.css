@@ -12,6 +12,7 @@
     border: unset;
     background-color: unset;
     padding: unset;
+    transition: opacity .125s ease-in-out;
 }
 
 .vote_score {
@@ -22,5 +23,11 @@
 @media screen and (min-width: 768px) {
     .container_vote {
         min-width: 10rem;
+    }
+
+    .vote_minus:hover,
+    .vote_plus:hover {
+        cursor: pointer;
+        opacity: 50%;
     }
 }

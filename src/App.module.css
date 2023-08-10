@@ -83,4 +83,8 @@
         margin-left: auto;
         cursor: pointer;
     }
+
+    .carousel_close_icon:hover {
+        filter: invert(51%) sepia(91%) saturate(1487%) hue-rotate(348deg) brightness(103%) contrast(101%);
+    }
 }

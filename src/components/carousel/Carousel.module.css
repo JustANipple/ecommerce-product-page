@@ -88,10 +88,14 @@
         border-radius: 1rem;
         overflow: hidden;
         max-width: 6rem;
+        background-color: var(--white);
+    }
+
+    .flexed_pictures li img {
         transition: opacity .125s ease-in-out;
     }
 
-    .flexed_pictures li:hover {
+    .flexed_pictures li:hover img {
         opacity: 50%;
     }
 
@@ -118,6 +122,13 @@
     .lightbox .previous_button img,
     .lightbox .next_button img {
         max-height: unset;
+        transition: filter .125s ease-in-out;
+    }
+
+    .lightbox .previous_button:hover img,
+    .lightbox .next_button:hover img {
+        filter: invert(51%) sepia(91%) saturate(1487%) hue-rotate(348deg) brightness(103%) contrast(101%);
+
     }
 
     .lightbox .previous_button {

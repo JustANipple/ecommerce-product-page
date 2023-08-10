@@ -47,7 +47,8 @@
         padding-inline: clamp(1rem, 4.762vw - 1.286rem, 3rem);
         margin-inline: clamp(1rem, 13.521vw - 2.169rem, 10rem);
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0rem, 27.75rem));
+        place-content: center;
         align-items: center;
         column-gap: clamp(1rem, 16.667vw - 7rem, 8rem);
     }

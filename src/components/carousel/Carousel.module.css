@@ -66,16 +66,18 @@
 
     .previous_button,
     .next_button {
-        display: none;
+        /*display: none;*/
     }
 
     .main_pictures {
         border-radius: 1rem;
+        pointer-events: unset;
     }
 
     .flexed_pictures {
         display: flex;
         justify-content: space-between;
+        gap: .5rem;
     }
 
     .flexed_pictures li {

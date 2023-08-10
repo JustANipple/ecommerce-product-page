@@ -68,7 +68,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: clamp(0rem, -1.1429rem + 2.381vw, 1rem);
 }
 
 .cart_icon {
@@ -82,12 +82,14 @@
     }
 
     .product_name {
-        font-size: calc(var(--fs) * 3);
+        font-size: clamp(1.75rem, 0.3214rem + 2.9762vw, 3rem);
+        max-width: 20ch;
     }
 
     .product_description {
         margin-block: 2rem 1.5rem;
         line-height: 1.75;
+        max-width: 50ch;
     }
 
     .price {
@@ -102,6 +104,6 @@
         margin-block-start: 1.5rem;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: clamp(0rem, -1.1429rem + 2.381vw, 1rem);
     }
 }

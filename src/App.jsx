@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styles from "./App.module.css"
 import Carousel from "./components/carousel/Carousel"
 import Cart from "./components/cart/Cart"
@@ -5,6 +6,8 @@ import Menu from "./components/menu/Menu"
 import Product from "./components/product/Product"
 
 function App() {
+
+  const [carousel, setCarousel] = useState(true);
 
   return (
     <>
@@ -26,8 +29,18 @@ function App() {
         </div>
       </nav>
       <main className={styles.main}>
-        <Carousel />
+        <Carousel 
+          carousel={carousel}
+          setCarousel={setCarousel}
+        />
         <Product />
+        {carousel ?
+        <Carousel 
+          type={"lightbox"}
+          carousel={carousel}
+          setCarousel={setCarousel}
+        />
+        : ""}
       </main>
     </>
   )

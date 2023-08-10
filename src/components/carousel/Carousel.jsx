@@ -1,7 +1,8 @@
 import { useState } from "react"
 import styles from "./Carousel.module.css"
 
-const Carousel = () => {
+// eslint-disable-next-line react/prop-types
+const Carousel = ({ type="default", carousel, setCarousel }) => {
 
     const [slide, setSlide] = useState("0");
     const [activeIndex, setActiveIndex] = useState(0);
@@ -31,27 +32,33 @@ const Carousel = () => {
     function handleNextClick() {
         if(parseInt(slide) === 3) {
             setSlide("0");
+            setActiveIndex(0);
         } else {
             setSlide((parseInt(slide) + 1).toString());
+            setActiveIndex(activeIndex + 1);
         }
     }
 
+    function handleCarouselClick() {
+        setCarousel(!carousel);
+    }
+
     return (
-        <div className={styles.carousel}>
+        <div className={`${styles.carousel} ${type === "lightbox" ? styles.lightbox : ""}`}>
             <div className={styles.main_content}>
                 <a 
-                    href={"#slide_" + slide} 
+                    href={"#slide_" + type + "_" + slide} 
                     onClick={handlePreviousClick}
                     className={styles.previous_button}
                 >
                     <img src="icon-previous.svg" alt="" />
                 </a>
-                <ul className={styles.main_pictures}>
+                <ul className={styles.main_pictures} onClick={handleCarouselClick}>
                     {pictures.map((picture, index) => {
                         return (
                             <li 
                                 key={index} 
-                                id={`slide_${index}`}
+                                id={"slide_" + type + "_" + index}
                             >
                                 <img src={picture} alt="product picture"/>
                             </li>
@@ -59,7 +66,7 @@ const Carousel = () => {
                     })}
                 </ul>
                 <a 
-                    href={"#slide_" + slide} 
+                    href={"#slide_" +  type + "_" + slide} 
                     onClick={handleNextClick}
                     className={styles.next_button}
                 >
@@ -73,7 +80,7 @@ const Carousel = () => {
                             key={index} 
                             className={activeIndex === index ? styles.picture_active : ""}
                             onClick={() => setActiveIndex(index)}>
-                            <a href={"#slide_" + index}>
+                            <a href={"#slide_" + type + "_" +  index}>
                                 <img 
                                     src={thumbnail} 
                                     alt="thumbnail picture" 

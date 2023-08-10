@@ -1,10 +1,12 @@
 .carousel {
     display: grid;
     row-gap: 2rem;
+    overflow: hidden;
 }
 
 .main_content {
     position: relative;
+    max-height: 18.75rem;
 }
 
 .main_pictures {
@@ -62,11 +64,16 @@
 @media screen and (min-width: 768px) {
     .carousel {
         flex: 1;
+        overflow: visible;
     }
 
     .previous_button,
     .next_button {
         display: none;
+    }
+
+    .main_content {
+        max-height: unset;
     }
 
     .main_pictures {
